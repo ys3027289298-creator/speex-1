@@ -27,7 +27,7 @@ libspeex_la_SOURCES = 	$(VPSY_SOURCE) $(FFTSRC) cb_search.c 	exc_10_32_table.c 	
 		ltp.c 	speex.c 	stereo.c 	vbr.c 	vq.c bits.c exc_10_16_table.c \
 	exc_20_32_table.c exc_5_256_table.c exc_5_64_table.c gain_table_lbr.c hexc_10_32_table.c \
 	lpc.c lsp_tables_nb.c modes.c modes_wb.c nb_celp.c quant_lsp.c sb_celp.c \
-	speex_callbacks.c speex_header.c window.c
+	speex_callbacks.c speex_header.c window.c echo_cancel.c
 
 
 noinst_HEADERS = 	arch.h 	bfin.h cb_search_arm4.h 	cb_search_bfin.h 	cb_search_sse.h \
@@ -43,11 +43,14 @@ libspeex_la_LDFLAGS = -no-undefined -version-info @SPEEX_LT_CURRENT@:@SPEEX_LT_R
 libspeex_la_LIBADD = $(LIBM)
 
 if BUILD_BINARIES
-noinst_PROGRAMS = testenc testenc_wb testenc_uwb
+noinst_PROGRAMS = testenc testenc_wb testenc_uwb testecho
 testenc_SOURCES = testenc.c
 testenc_LDADD = libspeex.la $(LIBM)
 testenc_wb_SOURCES = testenc_wb.c
 testenc_wb_LDADD = libspeex.la $(LIBM)
 testenc_uwb_SOURCES = testenc_uwb.c
 testenc_uwb_LDADD = libspeex.la $(LIBM)
+testecho_SOURCES = testecho.c
+testecho_LDADD = libspeex.la $(LIBM)
+TESTS = testecho
 endif

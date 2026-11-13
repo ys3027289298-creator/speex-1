@@ -30,6 +30,7 @@ speex_sources = files([
   'speex_callbacks.c',
   'speex_header.c',
   'window.c',
+  'echo_cancel.c',
 ])
 
 if fft_used == 'kiss'
@@ -76,4 +77,10 @@ if not get_option('test-binaries').disabled()
       dependencies: [speex_dep, libm],
       install: false)
   endforeach
+
+  testecho = executable('testecho', 'testecho.c',
+    include_directories: config_inc,
+    dependencies: [speex_dep, libm],
+    install: false)
+  test('echo-cancellation', testecho)
 endif

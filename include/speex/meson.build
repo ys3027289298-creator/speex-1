@@ -2,6 +2,7 @@ install_headers([
   'speex.h',
   'speex_bits.h',
   'speex_callbacks.h',
+  'speex_echo.h',
   'speex_header.h',
   'speex_stereo.h',
   'speex_types.h',

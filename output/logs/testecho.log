@@ -1,0 +1,5 @@
+echo suppression: ERLE = 24.6 dB (require >= 15 dB) ... PASS
+double-talk: near-end SNR = 31.2 dB (require >= 10 dB) ... PASS
+state save/restore: 8272 bytes, continuation bit-exact ... PASS
+disabled: output sample-exact pass-through ... PASS
+testecho: all checks passed

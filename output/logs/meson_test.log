@@ -1,0 +1,8 @@
+ninja: Entering directory `/home/ys/feedback/uidreczz28Z6pBXgiJa/build'
+ninja: no work to do.
+1/1 speex:echo-cancellation OK              0.39s
+
+Ok:                1   
+Fail:              0   
+
+Full log written to /home/ys/feedback/uidreczz28Z6pBXgiJa/build/meson-logs/testlog.txt

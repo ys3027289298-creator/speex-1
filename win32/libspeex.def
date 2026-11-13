@@ -74,3 +74,11 @@ speex_encode_stereo_int
 speex_decode_stereo
 speex_decode_stereo_int
 speex_std_stereo_request_handler
+
+;
+;	speex_echo.h
+;
+speex_echo_state_init
+speex_echo_state_destroy
+speex_echo_cancellation
+speex_echo_ctl
