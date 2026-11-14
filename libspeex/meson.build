@@ -14,6 +14,7 @@ speex_sources = files([
   'vbr.c',
   'vq.c',
   'bits.c',
+  'jitter.c',
   'exc_10_16_table.c',
   'exc_20_32_table.c',
   'exc_5_256_table.c',
@@ -70,7 +71,7 @@ pkg.generate(libspeex,
   version: meson.project_version())
 
 if not get_option('test-binaries').disabled()
-  foreach bin : ['testenc', 'testenc_wb', 'testenc_uwb']
+  foreach bin : ['testenc', 'testenc_wb', 'testenc_uwb', 'testjitter']
     executable(bin, '@0@.c'.format(bin),
       include_directories: config_inc,
       dependencies: [speex_dep, libm],

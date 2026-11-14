@@ -74,3 +74,18 @@ speex_encode_stereo_int
 speex_decode_stereo
 speex_decode_stereo_int
 speex_std_stereo_request_handler
+
+;
+;	speex_jitter.h
+;
+jitter_buffer_init
+jitter_buffer_reset
+jitter_buffer_destroy
+jitter_buffer_put
+jitter_buffer_get
+jitter_buffer_get_another
+jitter_buffer_get_pointer_timestamp
+jitter_buffer_tick
+jitter_buffer_remaining_span
+jitter_buffer_ctl
+jitter_buffer_update_delay

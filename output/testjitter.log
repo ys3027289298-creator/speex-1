@@ -1,0 +1,13 @@
+scenario A: frames=300 dropped=23 arrived=277 returned=277
+scenario A: lost=23 late=0 reordered=154 bound_drops=0 max_buffered=960 (bound=1280)
+PASS: A1 reorder recovery: all non-dropped frames decoded in order
+PASS: A2 loss diagnostics: lost timestamps match dropped set exactly
+PASS: A3 delay bound: max_buffered_observed <= configured bound
+PASS: A4 generous bound never triggers spurious drops
+PASS: A5 reorder counter matches simulated reorder events
+A-data: expected_reorder=154 reported_reorder=154 lost_reported=23 dropped_actual=23
+scenario B: frames=200 played=52 bound_drops=148 max_buffered=320 (bound=320)
+PASS: B1 delay bound enforced: max_buffered_observed <= tight bound
+PASS: B2 bound drops occurred and are accounted for
+PASS: B3 every frame was either played or accounted as bound drop
+RESULT: PASS (all checks passed)

@@ -3,6 +3,7 @@ install_headers([
   'speex_bits.h',
   'speex_callbacks.h',
   'speex_header.h',
+  'speex_jitter.h',
   'speex_stereo.h',
   'speex_types.h',
 ], subdir: 'speex')
